@@ -2,9 +2,14 @@
 <html>
     <head>
         <title>Tab Name</title>
+        <link rel="stylesheet" href="style.css"></link> <!-- goes in the head so the styles load before the page finishes loading -->
     </head>
     <body>
-        <h1>This is a Heading</h1>
-        <p>This is a paragraph.</p>
+        <div class="container">
+            <h1>This is a Heading</h1>
+            <p>This is a paragraph.</p>
+        </div>
+        <script src="script.js" defer></script>
+        <!-- script goes just before the closing body tag to make it run after html elements have loaded -->
     </body>
 </html>
