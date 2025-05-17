@@ -1,6 +1,8 @@
 body {
-    /* background-color: #f0f0f0; */
+    background-color: #888888;
+    /* text-shadow: 0 0 5px rgba(255, 255, 255, 1), 0 0 10px rgba(255, 255, 255, 1); */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -8,9 +10,23 @@ body {
     text-align: center;
     margin: 0; /* Remove default margin */
 }
+
 h1 {
-    color: #333;
+    color: #000000;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);;
+
 }
+
 p {
     color: #666;
+}
+
+#color-input {
+    background-color: rgba(255, 255, 255, 0);
+    /* -webkit-text-stroke: 0.333px white; */
+    width: 200px;
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 9999px; /* seems like this is the quickest way to make a pill-shaped element */
+    margin-top: 20px;
 }
