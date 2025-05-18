@@ -1,3 +1,20 @@
+<!--
+Goals of this webpage:
+1. Prompt the user for their favorite color
+2a. When the user begins typing, suggest the closest <=5 results from CSS's list of 140 named colors
+2b. Use fuse.js to implement the fuzzy search
+3. When the user selects a color, change the background color of the page to that color
+4. Revisiting the webpage should remember the user's color choice and set the background accordingly
+
+Secondary but important goals:
+1a. Make the input text box transparent, but the placeholder and input text readable
+1b. Make the input text box have a nice rounded border and a circular enter button on the right side
+2a. When the user enters a valid color, the page should gradually transition to that color
+2b. Page color should have an attractive gradient
+3. Prompt text, input text, and input border should have color contrast with the background 
+4. Placeholder text should have a random color from the list of CSS colors
+-->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,11 +22,16 @@
         <link rel="stylesheet" href="style.css"></link> <!-- goes in the head so the styles load before the page finishes loading -->
     </head>
     <body>
-        <div id="color-prompt" class="container">
+        <div id="color-prompt" class="container" data-align="center">
             <h1 id="color-prompt-label">Enter your favorite color</h1>
-            <input type="text" id="color-input" placeholder="Type your color here...">
-            <!-- <button id="color-submit">Submit</button> -->
+            <div id="input-wrapper" class="container" data-align="center">
+                <input type="text" id="color-input" placeholder="Type your color here...">
+                <button id="color-submit">&#x27A4</button>
+            </div>
+            <ul id="suggestions" class="suggestions-list" style="display:none;"></ul>
         </div>
+        <script src="node_modules/fuse.js/dist/fuse.basic.js"></script>
+        <script src="colors.js" defer></script>
         <script src="script.js" defer></script>
         <!-- script goes just before the closing body tag to make it run after html elements have loaded -->
     </body>

@@ -1,32 +1,52 @@
 body {
     background-color: #888888;
     /* text-shadow: 0 0 5px rgba(255, 255, 255, 1), 0 0 10px rgba(255, 255, 255, 1); */
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin */
+}
+
+body,
+[data-align="center"] {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    font-family: Arial, sans-serif;
     text-align: center;
-    margin: 0; /* Remove default margin */
 }
 
 h1 {
     color: #000000;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);;
-
+    /* -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);; */
+    background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* compatibility */
+    color: transparent;
 }
 
-p {
+/* p {
     color: #666;
-}
+} */
 
-#color-input {
-    background-color: rgba(255, 255, 255, 0);
+#input-wrapper {
+    background-color: rgba(0, 0, 0, 0.5);
     /* -webkit-text-stroke: 0.333px white; */
     width: 200px;
     padding: 10px;
     border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 9999px; /* seems like this is the quickest way to make a pill-shaped element */
     margin-top: 20px;
+    border-radius: 9999px;
+}
+
+#color-input {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#color-submit {
+    border: none;
+    border-radius: 9999px; /* we need a circle */
+    aspect-ratio: 1;
+    align-items: right;
 }
