@@ -1,18 +1,14 @@
 body {
     background-color: #888888;
     /* text-shadow: 0 0 5px rgba(255, 255, 255, 1), 0 0 10px rgba(255, 255, 255, 1); */
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    margin: 0; /* Remove default margin */
-}
-
-body,
-[data-align="center"] {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
     text-align: center;
+    margin: 0; /* Remove default margin */
 }
 
 h1 {
@@ -48,5 +44,5 @@ h1 {
     border: none;
     border-radius: 9999px; /* we need a circle */
     aspect-ratio: 1;
-    align-items: right;
+    /* align-items: right; */
 }
